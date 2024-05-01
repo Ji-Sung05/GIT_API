@@ -19,10 +19,12 @@ function App() {
 };
 
   useEffect(() => {
-    setTimeout(()=> {
-      fetchAuth();
-    }, 5000)
+    fetchAuth();
   }, []);
+
+  const handleButtonClick = () => {
+    fetchAuth();
+  };
 
   console.log(todos);
   return (
@@ -36,6 +38,7 @@ function App() {
       ) : (
         <p>Loading...</p>
       )}
+      <button onClick={handleButtonClick}>update</button>
     </>
   );
 }
