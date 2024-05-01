@@ -19,7 +19,9 @@ function App() {
 };
 
   useEffect(() => {
-    fetchAuth();
+    setTimeout(()=> {
+      fetchAuth();
+    }, 5000)
   }, []);
 
   console.log(todos);
